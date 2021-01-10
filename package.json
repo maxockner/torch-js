@@ -8,8 +8,8 @@
   "scripts": {
     "install": "yarn compile && yarn build",
     "build": "rm -rf dist/ && tsc && cp lib/torch.* dist/",
-    "compile": "cmake-js compile --CDCMAKE_PREFIX_PATH=../libtorch",
-    "rebuild": "cmake-js rebuild --CDCMAKE_PREFIX_PATH=../libtorch"
+    "compile": "LDFLAGS= cmake-js compile -l=silly --CDCMAKE_PREFIX_PATH=./libtorch",
+    "rebuild": "LDFLAGS= cmake-js rebuild --CDCMAKE_PREFIX_PATH=./libtorch"
   },
   "devDependencies": {
     "cmake-js": "^4.0.1",
