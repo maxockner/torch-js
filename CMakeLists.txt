@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.19)
 project (torch-js)
 
-# Use C++11
+# Use C++17
 set(CMAKE_CXX_STANDARD 11)
 if (NOT MSVC)
   set(CMAKE_C_STANDARD 11)
